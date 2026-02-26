@@ -1,0 +1,362 @@
+﻿rank,keyword,frequency,share_pct,cumulative_share_pct,dominant_source,article_count
+1,medicine,182,8.7923,8.7923,author_keywords,181
+2,environmental health,126,6.087,14.8792,author_keywords,125
+3,malnutrition,123,5.942,20.8213,author_keywords,122
+4,geography,78,3.7681,24.5894,author_keywords,77
+5,demography,74,3.5749,28.1643,author_keywords,73
+6,pediatrics,56,2.7053,30.8696,author_keywords,56
+7,population,54,2.6087,33.4783,author_keywords,53
+8,economic growth,53,2.5604,36.0386,author_keywords,52
+9,economics,52,2.5121,38.5507,author_keywords,51
+10,overweight,40,1.9324,40.4831,author_keywords,40
+11,underweight,39,1.8841,42.3671,author_keywords,39
+12,socioeconomics,38,1.8357,44.2029,author_keywords,37
+13,food security,35,1.6908,45.8937,author_keywords,34
+14,wasting,35,1.6908,47.5845,author_keywords,35
+15,body mass index,34,1.6425,49.2271,author_keywords,34
+16,public health,34,1.6425,50.8696,author_keywords,33
+17,agriculture,33,1.5942,52.4638,author_keywords,32
+18,logistic regression,31,1.4976,53.9614,author_keywords,31
+19,anthropometry,29,1.401,55.3623,author_keywords,28
+20,developing country,28,1.3527,56.715,author_keywords,27
+21,internal medicine,28,1.3527,58.0676,author_keywords,28
+22,political science,26,1.256,59.3237,author_keywords,26
+23,cross sectional study,24,1.1594,60.4831,author_keywords,23
+24,severe acute malnutrition,21,1.0145,61.4976,author_keywords,21
+25,psychological intervention,19,0.9179,62.4155,author_keywords,19
+26,nursing,18,0.8696,63.285,author_keywords,18
+27,socioeconomic status,18,0.8696,64.1546,author_keywords,17
+28,development economics,17,0.8213,64.9758,author_keywords,17
+29,gerontology,17,0.8213,65.7971,author_keywords,17
+30,sociology,16,0.7729,66.57,author_keywords,16
+31,confidence interval,15,0.7246,67.2947,author_keywords,15
+32,food insecurity,14,0.6763,67.971,author_keywords,14
+33,mathematics,14,0.6763,68.6473,author_keywords,14
+34,obesity,14,0.6763,69.3237,author_keywords,14
+35,odds ratio,13,0.628,69.9517,author_keywords,13
+36,poverty,13,0.628,70.5797,author_keywords,13
+37,business,12,0.5797,71.1594,author_keywords,12
+38,biology,11,0.5314,71.6908,author_keywords,11
+39,statistics,11,0.5314,72.2222,author_keywords,11
+40,biostatistics,10,0.4831,72.7053,author_keywords,9
+41,ecology,10,0.4831,73.1884,author_keywords,10
+42,pregnancy,10,0.4831,73.6715,author_keywords,10
+43,psychology,10,0.4831,74.1546,author_keywords,10
+44,inequality,9,0.4348,74.5894,author_keywords,9
+45,malnutrition in children,9,0.4348,75.0242,author_keywords,9
+46,residence,9,0.4348,75.4589,author_keywords,9
+47,child mortality,8,0.3865,75.8454,author_keywords,8
+48,under five,7,0.3382,76.1836,author_keywords,7
+49,clinical nutrition,6,0.2899,76.4734,author_keywords,6
+50,cohort,6,0.2899,76.7633,author_keywords,6
+51,demographic economics,6,0.2899,77.0531,author_keywords,6
+52,politics,6,0.2899,77.343,author_keywords,6
+53,climate change,5,0.2415,77.5845,author_keywords,5
+54,computer science,5,0.2415,77.8261,author_keywords,5
+55,context archaeology,5,0.2415,78.0676,author_keywords,5
+56,dietary diversity,5,0.2415,78.3092,author_keywords,5
+57,econometrics,5,0.2415,78.5507,author_keywords,5
+58,famine,5,0.2415,78.7923,author_keywords,5
+59,government linguistics,5,0.2415,79.0338,author_keywords,5
+60,livelihood,5,0.2415,79.2754,author_keywords,5
+61,odds,5,0.2415,79.5169,author_keywords,5
+62,descriptive statistics,4,0.1932,79.7101,author_keywords,4
+63,disease,4,0.1932,79.9034,author_keywords,4
+64,family medicine,4,0.1932,80.0966,author_keywords,4
+65,intervention counseling,4,0.1932,80.2899,author_keywords,4
+66,law,4,0.1932,80.4831,author_keywords,4
+67,low birth weight,4,0.1932,80.6763,author_keywords,4
+68,nutrition disorders,4,0.1932,80.8696,author_keywords,4
+69,retrospective cohort study,4,0.1932,81.0628,author_keywords,4
+70,surgery,4,0.1932,81.256,author_keywords,4
+71,systematic sampling,4,0.1932,81.4493,author_keywords,4
+72,tanzania,4,0.1932,81.6425,author_keywords,4
+73,action physics,3,0.1449,81.7874,author_keywords,3
+74,anemia,3,0.1449,81.9324,author_keywords,3
+75,birth order,3,0.1449,82.0773,author_keywords,3
+76,breastfeeding,3,0.1449,82.2222,author_keywords,3
+77,child health,3,0.1449,82.3671,author_keywords,3
+78,cluster spacecraft,3,0.1449,82.5121,author_keywords,3
+79,cohort study,3,0.1449,82.657,author_keywords,3
+80,coronavirus disease 2019 covid 19,3,0.1449,82.8019,author_keywords,3
+81,epidemiology,3,0.1449,82.9469,author_keywords,3
+82,food prices,3,0.1449,83.0918,author_keywords,3
+83,hazard ratio,3,0.1449,83.2367,author_keywords,3
+84,human capital,3,0.1449,83.3816,author_keywords,3
+85,latin americans,3,0.1449,83.5266,author_keywords,3
+86,marital status,3,0.1449,83.6715,author_keywords,3
+87,multivariate analysis,3,0.1449,83.8164,author_keywords,3
+88,nutrition education,3,0.1449,83.9614,author_keywords,3
+89,obstetrics,3,0.1449,84.1063,author_keywords,3
+90,panel data,3,0.1449,84.2512,author_keywords,3
+91,proportional hazards model,3,0.1449,84.3961,author_keywords,3
+92,psychiatry,3,0.1449,84.5411,author_keywords,3
+93,rural area,3,0.1449,84.686,author_keywords,3
+94,sanitation,3,0.1449,84.8309,author_keywords,3
+95,social science,3,0.1449,84.9758,author_keywords,3
+96,artificial intelligence,2,0.0966,85.0725,author_keywords,2
+97,birth weight,2,0.0966,85.1691,author_keywords,2
+98,breast feeding,2,0.0966,85.2657,author_keywords,2
+99,calorie,2,0.0966,85.3623,author_keywords,2
+100,cognition,2,0.0966,85.4589,author_keywords,2
+101,confounding,2,0.0966,85.5556,author_keywords,2
+102,consumption sociology,2,0.0966,85.6522,author_keywords,2
+103,democracy,2,0.0966,85.7488,author_keywords,2
+104,disease burden,2,0.0966,85.8454,author_keywords,2
+105,distribution mathematics,2,0.0966,85.942,author_keywords,2
+106,empowerment,2,0.0966,86.0386,author_keywords,2
+107,endocrinology,2,0.0966,86.1353,author_keywords,2
+108,environmental science,2,0.0966,86.2319,author_keywords,2
+109,estimation,2,0.0966,86.3285,author_keywords,2
+110,ethnic group,2,0.0966,86.4251,author_keywords,2
+111,extreme weather,2,0.0966,86.5217,author_keywords,2
+112,health informatics,2,0.0966,86.6184,author_keywords,2
+113,index typography,2,0.0966,86.715,author_keywords,2
+114,infant mortality,2,0.0966,86.8116,author_keywords,2
+115,internally displaced person,2,0.0966,86.9082,author_keywords,2
+116,kwashiorkor,2,0.0966,87.0048,author_keywords,2
+117,marasmus,2,0.0966,87.1014,author_keywords,2
+118,meteorology,2,0.0966,87.1981,author_keywords,2
+119,micronutrient deficiency,2,0.0966,87.2947,author_keywords,2
+120,multilevel model,2,0.0966,87.3913,author_keywords,2
+121,pandemic,2,0.0966,87.4879,author_keywords,2
+122,pathology,2,0.0966,87.5845,author_keywords,2
+123,per capita,2,0.0966,87.6812,author_keywords,2
+124,pneumonia,2,0.0966,87.7778,author_keywords,2
+125,prenatal care,2,0.0966,87.8744,author_keywords,2
+126,primary care,2,0.0966,87.971,author_keywords,2
+127,primary health care,2,0.0966,88.0676,author_keywords,2
+128,psychological resilience,2,0.0966,88.1643,author_keywords,2
+129,public economics,2,0.0966,88.2609,author_keywords,2
+130,qualitative research,2,0.0966,88.3575,author_keywords,2
+131,quantile,2,0.0966,88.4541,author_keywords,2
+132,quantile regression,2,0.0966,88.5507,author_keywords,2
+133,regression analysis,2,0.0966,88.6473,author_keywords,2
+134,research methodology,2,0.0966,88.744,author_keywords,2
+135,social psychology,2,0.0966,88.8406,author_keywords,2
+136,sustainable development,2,0.0966,88.9372,author_keywords,2
+137,test biology,2,0.0966,89.0338,author_keywords,2
+138,urbanization,2,0.0966,89.1304,author_keywords,2
+139,vulnerability computing,2,0.0966,89.2271,author_keywords,2
+140,weight for age,2,0.0966,89.3237,author_keywords,2
+141,2019 20 coronavirus outbreak,1,0.0483,89.372,author_keywords,1
+142,acute malnutrition,1,0.0483,89.4203,author_keywords,1
+143,adaptive capacity,1,0.0483,89.4686,author_keywords,1
+144,adjusted odds ratios,1,0.0483,89.5169,author_keywords,1
+145,adolescent boys and girls,1,0.0483,89.5652,author_keywords,1
+146,adverse weather,1,0.0483,89.6135,author_keywords,1
+147,agency philosophy,1,0.0483,89.6618,author_keywords,1
+148,agrarian society,1,0.0483,89.7101,author_keywords,1
+149,allometry,1,0.0483,89.7585,author_keywords,1
+150,archaeology,1,0.0483,89.8068,author_keywords,1
+151,armed conflict,1,0.0483,89.8551,author_keywords,1
+152,art,1,0.0483,89.9034,author_keywords,1
+153,autonomy,1,0.0483,89.9517,author_keywords,1
+154,autopsy,1,0.0483,90.0,author_keywords,1
+155,average treatment effect,1,0.0483,90.0483,author_keywords,1
+156,bayesian probability,1,0.0483,90.0966,author_keywords,1
+157,biomedicine,1,0.0483,90.1449,author_keywords,1
+158,bivariate analysis,1,0.0483,90.1932,author_keywords,1
+159,body mass index for age,1,0.0483,90.2415,author_keywords,1
+160,cape,1,0.0483,90.2899,author_keywords,1
+161,capital architecture,1,0.0483,90.3382,author_keywords,1
+162,caregivers,1,0.0483,90.3865,author_keywords,1
+163,cartography,1,0.0483,90.4348,author_keywords,1
+164,cash,1,0.0483,90.4831,author_keywords,1
+165,cash transfers,1,0.0483,90.5314,author_keywords,1
+166,cause of death,1,0.0483,90.5797,author_keywords,1
+167,center for food security studies college of development studies,1,0.0483,90.628,author_keywords,1
+168,child survival,1,0.0483,90.6763,author_keywords,1
+169,childbirth,1,0.0483,90.7246,author_keywords,1
+170,childhood malnutrition,1,0.0483,90.7729,author_keywords,1
+171,children,1,0.0483,90.8213,author_keywords,1
+172,citizen journalism,1,0.0483,90.8696,author_keywords,1
+173,civil society,1,0.0483,90.9179,author_keywords,1
+174,climate model,1,0.0483,90.9662,author_keywords,1
+175,climatology,1,0.0483,91.0145,author_keywords,1
+176,clinical psychology,1,0.0483,91.0628,author_keywords,1
+177,cluster randomised controlled trial,1,0.0483,91.1111,author_keywords,1
+178,cognitive decline,1,0.0483,91.1594,author_keywords,1
+179,cointegration,1,0.0483,91.2077,author_keywords,1
+180,cold weather,1,0.0483,91.256,author_keywords,1
+181,composition language,1,0.0483,91.3043,author_keywords,1
+182,confidence intervals,1,0.0483,91.3527,author_keywords,1
+183,conflation,1,0.0483,91.401,author_keywords,1
+184,confusion matrix,1,0.0483,91.4493,author_keywords,1
+185,coping psychology,1,0.0483,91.4976,author_keywords,1
+186,corporate governance,1,0.0483,91.5459,author_keywords,1
+187,counterfactual thinking,1,0.0483,91.5942,author_keywords,1
+188,data collection,1,0.0483,91.6425,author_keywords,1
+189,degree music,1,0.0483,91.6908,author_keywords,1
+190,descendant,1,0.0483,91.7391,author_keywords,1
+191,developmental psychology,1,0.0483,91.7874,author_keywords,1
+192,diarrhea,1,0.0483,91.8357,author_keywords,1
+193,diet diversity,1,0.0483,91.8841,author_keywords,1
+194,difference in differences,1,0.0483,91.9324,author_keywords,1
+195,disadvantaged,1,0.0483,91.9807,author_keywords,1
+196,diversity politics,1,0.0483,92.029,author_keywords,1
+197,double burden,1,0.0483,92.0773,author_keywords,1
+198,dynamics music,1,0.0483,92.1256,author_keywords,1
+199,early childhood,1,0.0483,92.1739,author_keywords,1
+200,effects of global warming,1,0.0483,92.2222,author_keywords,1
+201,endogeneity,1,0.0483,92.2705,author_keywords,1
+202,entitlement fair division,1,0.0483,92.3188,author_keywords,1
+203,environmental protection,1,0.0483,92.3671,author_keywords,1
+204,environmental resource management,1,0.0483,92.4155,author_keywords,1
+205,face sociological concept,1,0.0483,92.4638,author_keywords,1
+206,family income,1,0.0483,92.5121,author_keywords,1
+207,finance,1,0.0483,92.5604,author_keywords,1
+208,fixed effects model,1,0.0483,92.6087,author_keywords,1
+209,focus group,1,0.0483,92.657,author_keywords,1
+210,food,1,0.0483,92.7053,author_keywords,1
+211,food aid,1,0.0483,92.7536,author_keywords,1
+212,food and nutrition technical assistance iii project,1,0.0483,92.8019,author_keywords,1
+213,food distribution,1,0.0483,92.8502,author_keywords,1
+214,food group,1,0.0483,92.8986,author_keywords,1
+215,framing construction,1,0.0483,92.9469,author_keywords,1
+216,gender studies,1,0.0483,92.9952,author_keywords,1
+217,general,1,0.0483,93.0435,author_keywords,1
+218,genetics,1,0.0483,93.0918,author_keywords,1
+219,geology,1,0.0483,93.1401,author_keywords,1
+220,geopolitics,1,0.0483,93.1884,author_keywords,1
+221,geospatial analysis,1,0.0483,93.2367,author_keywords,1
+222,global warming,1,0.0483,93.285,author_keywords,1
+223,globalization,1,0.0483,93.3333,author_keywords,1
+224,gradient boosting,1,0.0483,93.3816,author_keywords,1
+225,head injury,1,0.0483,93.43,author_keywords,1
+226,health care,1,0.0483,93.4783,author_keywords,1
+227,health facility,1,0.0483,93.5266,author_keywords,1
+228,health geography,1,0.0483,93.5749,author_keywords,1
+229,health policy,1,0.0483,93.6232,author_keywords,1
+230,health promotion,1,0.0483,93.6715,author_keywords,1
+231,health services research,1,0.0483,93.7198,author_keywords,1
+232,height for age z score,1,0.0483,93.7681,author_keywords,1
+233,human geography,1,0.0483,93.8164,author_keywords,1
+234,hygiene,1,0.0483,93.8647,author_keywords,1
+235,image mathematics,1,0.0483,93.913,author_keywords,1
+236,immunology,1,0.0483,93.9614,author_keywords,1
+237,impact evaluation,1,0.0483,94.0097,author_keywords,1
+238,incidence geometry,1,0.0483,94.058,author_keywords,1
+239,indigenous,1,0.0483,94.1063,author_keywords,1
+240,injury prevention,1,0.0483,94.1546,author_keywords,1
+241,insulin,1,0.0483,94.2029,author_keywords,1
+242,interdependence,1,0.0483,94.2512,author_keywords,1
+243,intergeneration malnutrition,1,0.0483,94.2995,author_keywords,1
+244,international health,1,0.0483,94.3478,author_keywords,1
+245,intraclass correlation,1,0.0483,94.3961,author_keywords,1
+246,investment military,1,0.0483,94.4444,author_keywords,1
+247,jaccard index,1,0.0483,94.4928,author_keywords,1
+248,kenya,1,0.0483,94.5411,author_keywords,1
+249,labour economics,1,0.0483,94.5894,author_keywords,1
+250,language change,1,0.0483,94.6377,author_keywords,1
+251,legislation,1,0.0483,94.686,author_keywords,1
+252,livestock,1,0.0483,94.7343,author_keywords,1
+253,loan,1,0.0483,94.7826,author_keywords,1
+254,local government,1,0.0483,94.8309,author_keywords,1
+255,local government area,1,0.0483,94.8792,author_keywords,1
+256,longitudinal study,1,0.0483,94.9275,author_keywords,1
+257,low and middle income countries,1,0.0483,94.9758,author_keywords,1
+258,machine learning,1,0.0483,95.0242,author_keywords,1
+259,mainstream,1,0.0483,95.0725,author_keywords,1
+260,malaria,1,0.0483,95.1208,author_keywords,1
+261,market economy,1,0.0483,95.1691,author_keywords,1
+262,matching statistics,1,0.0483,95.2174,author_keywords,1
+263,maternal and child health,1,0.0483,95.2657,author_keywords,1
+264,measles,1,0.0483,95.314,author_keywords,1
+265,medical emergency,1,0.0483,95.3623,author_keywords,1
+266,medical prescription,1,0.0483,95.4106,author_keywords,1
+267,meta analysis,1,0.0483,95.4589,author_keywords,1
+268,micronutrient,1,0.0483,95.5072,author_keywords,1
+269,multinomial logistic regression,1,0.0483,95.5556,author_keywords,1
+270,multistage sampling,1,0.0483,95.6039,author_keywords,1
+271,multivariate statistics,1,0.0483,95.6522,author_keywords,1
+272,narrative,1,0.0483,95.7005,author_keywords,1
+273,natural resource economics,1,0.0483,95.7488,author_keywords,1
+274,nutrition,1,0.0483,95.7971,author_keywords,1
+275,nutrition transition,1,0.0483,95.8454,author_keywords,1
+276,occupational safety and health,1,0.0483,95.8937,author_keywords,1
+277,offspring,1,0.0483,95.942,author_keywords,1
+278,operationalization,1,0.0483,95.9903,author_keywords,1
+279,ordered logit,1,0.0483,96.0386,author_keywords,1
+280,ordinal regression,1,0.0483,96.087,author_keywords,1
+281,ordinary least squares,1,0.0483,96.1353,author_keywords,1
+282,outbreak,1,0.0483,96.1836,author_keywords,1
+283,outpatient clinic,1,0.0483,96.2319,author_keywords,1
+284,overnutrition,1,0.0483,96.2802,author_keywords,1
+285,parliament,1,0.0483,96.3285,author_keywords,1
+286,pastoralism,1,0.0483,96.3768,author_keywords,1
+287,per capita income,1,0.0483,96.4251,author_keywords,1
+288,philosophy,1,0.0483,96.4734,author_keywords,1
+289,physical geography,1,0.0483,96.5217,author_keywords,1
+290,physical therapy,1,0.0483,96.57,author_keywords,1
+291,physics,1,0.0483,96.6184,author_keywords,1
+292,poison control,1,0.0483,96.6667,author_keywords,1
+293,poisson regression,1,0.0483,96.715,author_keywords,1
+294,pooled analysis,1,0.0483,96.7633,author_keywords,1
+295,population growth,1,0.0483,96.8116,author_keywords,1
+296,probit model,1,0.0483,96.8599,author_keywords,1
+297,production economics,1,0.0483,96.9082,author_keywords,1
+298,promotion chess,1,0.0483,96.9565,author_keywords,1
+299,propensity score matching,1,0.0483,97.0048,author_keywords,1
+300,prospective cohort study,1,0.0483,97.0531,author_keywords,1
+301,protein energy malnutrition,1,0.0483,97.1014,author_keywords,1
+302,public administration,1,0.0483,97.1498,author_keywords,1
+303,public relations,1,0.0483,97.1981,author_keywords,1
+304,qualitative property,1,0.0483,97.2464,author_keywords,1
+305,quality philosophy,1,0.0483,97.2947,author_keywords,1
+306,random forest,1,0.0483,97.343,author_keywords,1
+307,randomized controlled trial,1,0.0483,97.3913,author_keywords,1
+308,referral,1,0.0483,97.4396,author_keywords,1
+309,reproductive health,1,0.0483,97.4879,author_keywords,1
+310,resilience materials science,1,0.0483,97.5362,author_keywords,1
+311,resource disambiguation,1,0.0483,97.5845,author_keywords,1
+312,road traffic,1,0.0483,97.6329,author_keywords,1
+313,rural community,1,0.0483,97.6812,author_keywords,1
+314,salience neuroscience,1,0.0483,97.7295,author_keywords,1
+315,scale ratio,1,0.0483,97.7778,author_keywords,1
+316,settlement finance,1,0.0483,97.8261,author_keywords,1
+317,severe acute respiratory syndrome coronavirus 2 sars cov 2,1,0.0483,97.8744,author_keywords,1
+318,shock circulatory,1,0.0483,97.9227,author_keywords,1
+319,sierra leone,1,0.0483,97.971,author_keywords,1
+320,similarity geometry,1,0.0483,98.0193,author_keywords,1
+321,skinfold thickness,1,0.0483,98.0676,author_keywords,1
+322,snow,1,0.0483,98.1159,author_keywords,1
+323,social class,1,0.0483,98.1643,author_keywords,1
+324,somali,1,0.0483,98.2126,author_keywords,1
+325,space punctuation,1,0.0483,98.2609,author_keywords,1
+326,spanish civil war,1,0.0483,98.3092,author_keywords,1
+327,standard deviation,1,0.0483,98.3575,author_keywords,1
+328,standard of living,1,0.0483,98.4058,author_keywords,1
+329,standard score,1,0.0483,98.4541,author_keywords,1
+330,starvation,1,0.0483,98.5024,author_keywords,1
+331,statistic,1,0.0483,98.5507,author_keywords,1
+332,statistical package for the social sciences,1,0.0483,98.599,author_keywords,1
+333,statistical significance,1,0.0483,98.6473,author_keywords,1
+334,statistical software,1,0.0483,98.6957,author_keywords,1
+335,stressor,1,0.0483,98.744,author_keywords,1
+336,structural equation modeling,1,0.0483,98.7923,author_keywords,1
+337,stunted growth,1,0.0483,98.8406,author_keywords,1
+338,stunting,1,0.0483,98.8889,author_keywords,1
+339,subsistence agriculture,1,0.0483,98.9372,author_keywords,1
+340,survey data collection,1,0.0483,98.9855,author_keywords,1
+341,survival analysis,1,0.0483,99.0338,author_keywords,1
+342,term time,1,0.0483,99.0821,author_keywords,1
+343,thematic analysis,1,0.0483,99.1304,author_keywords,1
+344,towns,1,0.0483,99.1787,author_keywords,1
+345,traumatic brain injury,1,0.0483,99.2271,author_keywords,1
+346,treatment and control groups,1,0.0483,99.2754,author_keywords,1
+347,unrest,1,0.0483,99.3237,author_keywords,1
+348,vaccination,1,0.0483,99.372,author_keywords,1
+349,vaccination and immunization,1,0.0483,99.4203,author_keywords,1
+350,variance inflation factor,1,0.0483,99.4686,author_keywords,1
+351,verbal autopsy,1,0.0483,99.5169,author_keywords,1
+352,virology,1,0.0483,99.5652,author_keywords,1
+353,visual arts,1,0.0483,99.6135,author_keywords,1
+354,voucher,1,0.0483,99.6618,author_keywords,1
+355,wasting syndrome,1,0.0483,99.7101,author_keywords,1
+356,weaning,1,0.0483,99.7585,author_keywords,1
+357,weather patterns,1,0.0483,99.8068,author_keywords,1
+358,women s empowerment,1,0.0483,99.8551,author_keywords,1
+359,world health organization,1,0.0483,99.9034,author_keywords,1
+360,yield engineering,1,0.0483,99.9517,author_keywords,1
+361,young adult,1,0.0483,100.0,author_keywords,1

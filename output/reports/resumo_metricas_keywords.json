@@ -1,0 +1,14 @@
+{
+  "total_occurrences": 2070,
+  "unique_keywords": 361,
+  "top1_share_pct": 8.7923,
+  "top5_share_pct": 28.1643,
+  "top10_share_pct": 40.4832,
+  "top20_share_pct": 56.7151,
+  "hhi": 0.02521,
+  "entropy_normalized": 0.770764,
+  "gini": 0.735228,
+  "singletons": 221,
+  "singleton_share_pct": 61.2188,
+  "rank_for_80pct": 64
+}

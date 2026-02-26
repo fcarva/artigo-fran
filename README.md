@@ -1,57 +1,74 @@
-# Keyword map para artigos (CSV)
+﻿# Keyword Analysis Pipeline (Academic Style)
 
-Este projeto gera uma base pronta para análise estatística de palavras-chave e para criação de **keyword map**.
+This project processes article metadata, builds keyword datasets, and generates publication-ready outputs:
 
-## Entradas esperadas
+- enriched keyword tables
+- academic wordcloud
+- top-keyword + Pareto concentration chart
+- extended Markdown report with concentration diagnostics (HHI, Gini, entropy)
 
-Arquivo CSV com uma coluna de texto (ex.: `text`, `texto`, `conteudo`, `content`) e opcionalmente uma coluna de ID (`id`, `article_id`, etc.).
+## Folder Organization
 
-Se não houver ID (ou se vier vazio em alguma linha), o script cria um ID sequencial automaticamente.
-
-## Saídas geradas
-
-Ao executar o script, ele cria os arquivos abaixo:
-
-1. `word_frequency.csv`  
-   Frequência absoluta e relativa de cada palavra no corpus.
-2. `document_word_matrix.csv`  
-   Matriz documento x palavra (contagem), usando as palavras mais frequentes.
-3. `article_keywords.csv`  
-   Lista de palavras-chave por artigo (`id`, `rank`, `keyword`, `score`) via TF-IDF.
-4. `word_map_summary.json`  
-   Resumo estatístico do processamento (nº de documentos, tokens, vocabulário e top palavras).
-5. `keyword_cooccurrence.csv` (opcional)  
-   Arestas (`source`, `target`, `weight`) para montar grafo/mapa de palavras quando `--cooccurrence-window > 0`.
-
-## Como executar
-
-```bash
-python3 scripts/word_map_analysis.py \
-  --input dados_exemplo_100_artigos.csv \
-  --output-dir output_keywords \
-  --language pt \
-  --top-words 300 \
-  --keywords-per-article 15 \
-  --cooccurrence-window 2
+```text
+artigo-fran/
+  data/
+    raw/
+      dados_final.csv
+      dados_exemplo_100_artigos.csv
+    processed/
+      keywords_articles.csv
+      keywords_frequency.csv
+      article_status.csv
+  output/
+    figures/
+      nuvem_palavras_academica.png
+      nuvem_palavras_academica.svg
+      grafico_top_keywords_academico.png
+      grafico_top_keywords_academico.svg
+    tables/
+      tabela_keywords_completa.csv
+      tabela_keywords_top40.csv
+    reports/
+      analise_keywords_completa.md
+      resumo_metricas_keywords.json
+  scripts/
+    keywords_from_metadata.py
+  gerar_nuvem_palavras.py
 ```
 
-## Parâmetros úteis
-
-- `--delimiter` (padrão `auto`): detecta automaticamente delimitador `,`, `;`, `\t` ou `|`
-- `--text-column` (opcional; se não passar, tenta detectar automaticamente)
-- `--id-column` (opcional; se não passar, tenta detectar automaticamente)
-- `--top-words` (padrão `300`): tamanho do vocabulário da matriz documento x palavra
-- `--keywords-per-article` (padrão `15`): quantas palavras-chave por artigo
-- `--cooccurrence-window` (padrão `0`): se > 0, gera coocorrência para keyword map em rede
-- `--min-word-length` (padrão `3`)
-- `--stopwords-file`: arquivo de stopwords customizadas (uma por linha)
-
-## Exemplo para seus 83 artigos
+## 1) Build Keyword Tables (metadata + enrichment)
 
 ```bash
-python3 scripts/word_map_analysis.py --input seus_83_artigos.csv --output-dir output_83 --language pt --keywords-per-article 20 --cooccurrence-window 2
+python artigo-fran/scripts/keywords_from_metadata.py \
+  --input artigo-fran/data/raw/dados_final.csv \
+  --output-dir artigo-fran/data/processed
 ```
 
-Depois, use:
-- `article_keywords.csv` para ranking de palavras por artigo.
-- `keyword_cooccurrence.csv` para visualização de rede (Power BI, Gephi, Python NetworkX, R igraph etc.).
+## 2) Generate Academic Visuals + Complete Analysis
+
+```bash
+python artigo-fran/gerar_nuvem_palavras.py \
+  --input artigo-fran/data/processed/keywords_articles.csv \
+  --output-root artigo-fran/output \
+  --title "Keyword Cloud - dados_final.csv" \
+  --top-n 40 \
+  --max-words 500 \
+  --min-frequency 1
+```
+
+## Optional Arguments
+
+- `--exclude-terms "term1,term2,..."`: remove generic terms from analysis
+- `--legacy-output-dir artigo-fran`: also write legacy file names in root folder
+
+## Academic Good Practices Included
+
+- explicit normalization and filtering rules
+- reproducible wordcloud (`random_state=42`)
+- top-keyword chart plus Pareto concentration curve
+- concentration metrics in report:
+  - Top-k cumulative shares
+  - HHI
+  - Gini coefficient
+  - normalized Shannon entropy
+- structured outputs in figures/tables/reports folders

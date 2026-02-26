@@ -1,0 +1,51 @@
+﻿rank,keyword,frequency,share_pct,cumulative_share_pct,dominant_source,article_count
+1,medicine,182,8.7923,8.7923,author_keywords,181
+2,environmental health,126,6.087,14.8792,author_keywords,125
+3,malnutrition,123,5.942,20.8213,author_keywords,122
+4,geography,78,3.7681,24.5894,author_keywords,77
+5,demography,74,3.5749,28.1643,author_keywords,73
+6,pediatrics,56,2.7053,30.8696,author_keywords,56
+7,population,54,2.6087,33.4783,author_keywords,53
+8,economic growth,53,2.5604,36.0386,author_keywords,52
+9,economics,52,2.5121,38.5507,author_keywords,51
+10,overweight,40,1.9324,40.4831,author_keywords,40
+11,underweight,39,1.8841,42.3671,author_keywords,39
+12,socioeconomics,38,1.8357,44.2029,author_keywords,37
+13,food security,35,1.6908,45.8937,author_keywords,34
+14,wasting,35,1.6908,47.5845,author_keywords,35
+15,body mass index,34,1.6425,49.2271,author_keywords,34
+16,public health,34,1.6425,50.8696,author_keywords,33
+17,agriculture,33,1.5942,52.4638,author_keywords,32
+18,logistic regression,31,1.4976,53.9614,author_keywords,31
+19,anthropometry,29,1.401,55.3623,author_keywords,28
+20,developing country,28,1.3527,56.715,author_keywords,27
+21,internal medicine,28,1.3527,58.0676,author_keywords,28
+22,political science,26,1.256,59.3237,author_keywords,26
+23,cross sectional study,24,1.1594,60.4831,author_keywords,23
+24,severe acute malnutrition,21,1.0145,61.4976,author_keywords,21
+25,psychological intervention,19,0.9179,62.4155,author_keywords,19
+26,nursing,18,0.8696,63.285,author_keywords,18
+27,socioeconomic status,18,0.8696,64.1546,author_keywords,17
+28,development economics,17,0.8213,64.9758,author_keywords,17
+29,gerontology,17,0.8213,65.7971,author_keywords,17
+30,sociology,16,0.7729,66.57,author_keywords,16
+31,confidence interval,15,0.7246,67.2947,author_keywords,15
+32,food insecurity,14,0.6763,67.971,author_keywords,14
+33,mathematics,14,0.6763,68.6473,author_keywords,14
+34,obesity,14,0.6763,69.3237,author_keywords,14
+35,odds ratio,13,0.628,69.9517,author_keywords,13
+36,poverty,13,0.628,70.5797,author_keywords,13
+37,business,12,0.5797,71.1594,author_keywords,12
+38,biology,11,0.5314,71.6908,author_keywords,11
+39,statistics,11,0.5314,72.2222,author_keywords,11
+40,biostatistics,10,0.4831,72.7053,author_keywords,9
+41,ecology,10,0.4831,73.1884,author_keywords,10
+42,pregnancy,10,0.4831,73.6715,author_keywords,10
+43,psychology,10,0.4831,74.1546,author_keywords,10
+44,inequality,9,0.4348,74.5894,author_keywords,9
+45,malnutrition in children,9,0.4348,75.0242,author_keywords,9
+46,residence,9,0.4348,75.4589,author_keywords,9
+47,child mortality,8,0.3865,75.8454,author_keywords,8
+48,under five,7,0.3382,76.1836,author_keywords,7
+49,clinical nutrition,6,0.2899,76.4734,author_keywords,6
+50,cohort,6,0.2899,76.7633,author_keywords,6
