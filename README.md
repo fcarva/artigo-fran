@@ -1,55 +1,51 @@
-# Análise de Mapa de Palavras para Artigos
+# Keyword map para artigos (CSV)
 
-Este repositório contém um script para transformar textos de artigos em saídas úteis para análise estatística.
+Este projeto gera uma base pronta para análise estatística de palavras-chave e para criação de **keyword map**.
 
-## O que o script gera
+## Entradas esperadas
 
-A partir de um arquivo com os artigos, o script produz:
+Arquivo CSV com uma coluna de texto (ex.: `text`, `texto`, `conteudo`, `content`) e opcionalmente uma coluna de ID (`id`, `article_id`, etc.).
 
-1. `word_frequency.csv`: frequência absoluta e relativa de cada palavra.
-2. `document_word_matrix.csv`: matriz documento x palavra (contagem), limitada às palavras mais frequentes.
-3. `word_map_summary.json`: resumo estatístico geral (nº de documentos, tokens, vocabulário, etc.).
+Se não houver ID, o script cria um ID sequencial automaticamente.
 
-## Formato de entrada
+## Saídas geradas
 
-Arquivo CSV com pelo menos estas colunas:
+Ao executar o script, ele cria os arquivos abaixo:
 
-- `id`: identificador do artigo
-- `text`: texto do artigo
-
-Exemplo:
-
-```csv
-id,text
-1,"Este é um artigo de exemplo"
-2,"Outro artigo para análise de palavras"
-```
+1. `word_frequency.csv`  
+   Frequência absoluta e relativa de cada palavra no corpus.
+2. `document_word_matrix.csv`  
+   Matriz documento x palavra (contagem), usando as palavras mais frequentes.
+3. `article_keywords.csv`  
+   Lista de palavras-chave por artigo (`id`, `rank`, `keyword`, `score`) via TF-IDF.
+4. `word_map_summary.json`  
+   Resumo estatístico do processamento (nº de documentos, tokens, vocabulário e top palavras).
 
 ## Como executar
 
 ```bash
 python3 scripts/word_map_analysis.py \
-  --input artigos.csv \
-  --output-dir output \
+  --input dados_exemplo_100_artigos.csv \
+  --output-dir output_keywords \
   --language pt \
-  --top-words 300
+  --top-words 300 \
+  --keywords-per-article 15
 ```
 
-### Parâmetros opcionais
+## Parâmetros úteis
 
-- `--delimiter` (padrão: `,`): delimitador do CSV.
-- `--min-word-length` (padrão: `3`): tamanho mínimo das palavras.
-- `--top-words` (padrão: `300`): número de palavras para matriz documento x palavra.
-- `--stopwords-file`: caminho para arquivo de stopwords customizadas (uma por linha).
-- `--id-column` (padrão: `id`): nome da coluna de ID.
-- `--text-column` (padrão: `text`): nome da coluna de texto.
+- `--delimiter` (padrão `,`)
+- `--text-column` (opcional; se não passar, tenta detectar automaticamente)
+- `--id-column` (opcional; se não passar, tenta detectar automaticamente)
+- `--top-words` (padrão `300`): tamanho do vocabulário da matriz documento x palavra
+- `--keywords-per-article` (padrão `15`): quantas palavras-chave por artigo
+- `--min-word-length` (padrão `3`)
+- `--stopwords-file`: arquivo de stopwords customizadas (uma por linha)
 
-## Exemplo para 8 mil artigos
-
-Se você possui 8.000 artigos no arquivo `artigos_8000.csv`:
+## Exemplo para seus 83 artigos
 
 ```bash
-python3 scripts/word_map_analysis.py --input artigos_8000.csv --output-dir output_8000 --language pt --top-words 500
+python3 scripts/word_map_analysis.py --input seus_83_artigos.csv --output-dir output_83 --language pt --keywords-per-article 20
 ```
 
-Depois, você pode abrir os CSVs em R, Python, Power BI, Excel ou outro software estatístico.
+Depois, use `article_keywords.csv` para construir visualmente seu mapa de palavras-chave (Power BI, Python, R, Gephi etc.).
