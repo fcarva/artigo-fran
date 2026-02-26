@@ -41,12 +41,22 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--input", required=True, help="Caminho para o CSV com os artigos")
     parser.add_argument("--output-dir", required=True, help="Diretório onde os arquivos de saída serão salvos")
-    parser.add_argument("--delimiter", default=",", help="Delimitador do CSV (padrão: ,)")
+    parser.add_argument(
+        "--delimiter",
+        default="auto",
+        help="Delimitador do CSV. Use ',' ';' '\\t' ou 'auto' para detectar automaticamente (padrão: auto)",
+    )
     parser.add_argument("--id-column", default="", help="Nome da coluna de ID (opcional)")
     parser.add_argument("--text-column", default="", help="Nome da coluna de texto (opcional)")
     parser.add_argument("--language", choices=["pt", "en"], default="pt", help="Idioma para stopwords")
     parser.add_argument("--top-words", type=int, default=300, help="Número de palavras para a matriz documento x palavra")
     parser.add_argument("--keywords-per-article", type=int, default=15, help="Número de palavras-chave por artigo")
+    parser.add_argument(
+        "--cooccurrence-window",
+        type=int,
+        default=0,
+        help="Se > 0, gera coocorrência de palavras dentro da janela por artigo em keyword_cooccurrence.csv",
+    )
     parser.add_argument("--min-word-length", type=int, default=3, help="Tamanho mínimo das palavras")
     parser.add_argument("--stopwords-file", help="Arquivo de stopwords customizadas (uma por linha)")
     return parser.parse_args()
@@ -59,6 +69,22 @@ def load_stopwords(language: str, stopwords_file: str | None) -> set[str]:
             custom = {line.strip().lower() for line in file if line.strip()}
             stopwords.update(custom)
     return stopwords
+
+
+def normalize_delimiter(delimiter: str) -> str:
+    if delimiter == r"\t":
+        return "\t"
+    return delimiter
+
+
+def detect_delimiter(input_file: Path) -> str:
+    with input_file.open("r", encoding="utf-8", newline="") as csv_file:
+        sample = csv_file.read(4096)
+    try:
+        dialect = csv.Sniffer().sniff(sample, delimiters=[",", ";", "\t", "|"])
+        return dialect.delimiter
+    except csv.Error:
+        return ","
 
 
 def tokenize(text: str, stopwords: set[str], min_word_length: int) -> list[str]:
@@ -89,12 +115,14 @@ def read_articles(
     text_column: str,
     stopwords: set[str],
     min_word_length: int,
-) -> tuple[list[str], list[list[str]], str, str]:
+) -> tuple[list[str], list[list[str]], str, str, str]:
     ids: list[str] = []
     docs_tokens: list[list[str]] = []
 
+    delimiter_used = detect_delimiter(input_file) if delimiter == "auto" else normalize_delimiter(delimiter)
+
     with input_file.open("r", encoding="utf-8", newline="") as csv_file:
-        reader = csv.DictReader(csv_file, delimiter=delimiter)
+        reader = csv.DictReader(csv_file, delimiter=delimiter_used)
         fieldnames = reader.fieldnames or []
         if not fieldnames:
             raise ValueError("CSV sem cabeçalho.")
@@ -110,12 +138,13 @@ def read_articles(
                 selected_id_column = ""
 
         for idx, row in enumerate(reader, start=1):
-            doc_id = str(row[selected_id_column]).strip() if selected_id_column else str(idx)
+            row_id = str(row[selected_id_column]).strip() if selected_id_column else ""
+            doc_id = row_id or str(idx)
             text = str(row.get(selected_text_column, "") or "").strip()
             ids.append(doc_id)
             docs_tokens.append(tokenize(text, stopwords, min_word_length))
 
-    return ids, docs_tokens, selected_id_column, selected_text_column
+    return ids, docs_tokens, selected_id_column, selected_text_column, delimiter_used
 
 
 def write_word_frequency(output_file: Path, corpus_counter: Counter[str], total_tokens: int) -> None:
@@ -167,6 +196,24 @@ def compute_tfidf_keywords(docs_tokens: list[list[str]], keywords_per_article: i
     return all_keywords
 
 
+def compute_keyword_cooccurrence(docs_tokens: list[list[str]], window: int) -> Counter[tuple[str, str]]:
+    cooc_counter: Counter[tuple[str, str]] = Counter()
+    if window <= 0:
+        return cooc_counter
+
+    for tokens in docs_tokens:
+        for i, token_a in enumerate(tokens):
+            max_j = min(i + window + 1, len(tokens))
+            for j in range(i + 1, max_j):
+                token_b = tokens[j]
+                if token_a == token_b:
+                    continue
+                edge = tuple(sorted((token_a, token_b)))
+                cooc_counter[edge] += 1
+
+    return cooc_counter
+
+
 def write_article_keywords(output_file: Path, doc_ids: list[str], keywords: list[list[tuple[str, float]]]) -> None:
     with output_file.open("w", encoding="utf-8", newline="") as csv_file:
         writer = csv.writer(csv_file)
@@ -174,6 +221,14 @@ def write_article_keywords(output_file: Path, doc_ids: list[str], keywords: list
         for doc_id, items in zip(doc_ids, keywords):
             for rank, (word, score) in enumerate(items, start=1):
                 writer.writerow([doc_id, rank, word, f"{score:.8f}"])
+
+
+def write_keyword_cooccurrence(output_file: Path, cooc_counter: Counter[tuple[str, str]]) -> None:
+    with output_file.open("w", encoding="utf-8", newline="") as csv_file:
+        writer = csv.writer(csv_file)
+        writer.writerow(["source", "target", "weight"])
+        for (source, target), weight in cooc_counter.most_common():
+            writer.writerow([source, target, weight])
 
 
 def write_summary(
@@ -185,6 +240,8 @@ def write_summary(
     top_words: list[tuple[str, int]],
     id_column_used: str,
     text_column_used: str,
+    delimiter_used: str,
+    cooccurrence_edges: int,
 ) -> None:
     summary = {
         "documents": num_docs,
@@ -193,6 +250,8 @@ def write_summary(
         "avg_tokens_per_document": round(avg_tokens_per_doc, 4),
         "id_column_used": id_column_used or "generated_row_number",
         "text_column_used": text_column_used,
+        "delimiter_used": "\\t" if delimiter_used == "\t" else delimiter_used,
+        "cooccurrence_edges": cooccurrence_edges,
         "top_20_words": [{"word": word, "frequency": freq} for word, freq in top_words],
     }
     output_file.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -205,7 +264,7 @@ def main() -> None:
 
     stopwords = load_stopwords(args.language, args.stopwords_file)
 
-    doc_ids, docs_tokens, id_column_used, text_column_used = read_articles(
+    doc_ids, docs_tokens, id_column_used, text_column_used, delimiter_used = read_articles(
         input_file=Path(args.input),
         delimiter=args.delimiter,
         id_column=args.id_column,
@@ -221,10 +280,14 @@ def main() -> None:
     total_tokens = sum(corpus_counter.values())
     top_words = [word for word, _ in corpus_counter.most_common(args.top_words)]
     article_keywords = compute_tfidf_keywords(docs_tokens, args.keywords_per_article)
+    cooccurrence = compute_keyword_cooccurrence(docs_tokens, args.cooccurrence_window)
 
     write_word_frequency(output_dir / "word_frequency.csv", corpus_counter, total_tokens)
     write_document_word_matrix(output_dir / "document_word_matrix.csv", doc_ids, docs_tokens, top_words)
     write_article_keywords(output_dir / "article_keywords.csv", doc_ids, article_keywords)
+    if args.cooccurrence_window > 0:
+        write_keyword_cooccurrence(output_dir / "keyword_cooccurrence.csv", cooccurrence)
+
     write_summary(
         output_dir / "word_map_summary.json",
         num_docs=len(doc_ids),
@@ -234,6 +297,8 @@ def main() -> None:
         top_words=corpus_counter.most_common(20),
         id_column_used=id_column_used,
         text_column_used=text_column_used,
+        delimiter_used=delimiter_used,
+        cooccurrence_edges=len(cooccurrence),
     )
 
     print(f"Arquivos gerados em: {output_dir}")
